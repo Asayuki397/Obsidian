@@ -1,0 +1,307 @@
+{
+  "main": {
+    "id": "6d9b207dce8c7551",
+    "type": "split",
+    "children": [
+      {
+        "id": "e785cd8e3590eda8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "645a20da281c0a2d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "c56d182510f93aa6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MAS102/Norm(length).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Norm(length)"
+            }
+          },
+          {
+            "id": "73c8393f5dcc1b69",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KAIST_2024F_Obsidian/MAS102/Cross Product.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cross Product"
+            }
+          },
+          {
+            "id": "0339fbd636b4954b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.6"
+            }
+          },
+          {
+            "id": "3f70e189b1b723d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KAIST_2024F_Obsidian/MAS109/Matrix.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Matrix"
+            }
+          },
+          {
+            "id": "44ac7d5bdf609308",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KAIST_2024F_Obsidian/MAS109/Leading Element.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Leading Element"
+            }
+          },
+          {
+            "id": "1c632b5d6c4a1c2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KAIST_2024F_Obsidian/MAS109/Matrix.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Matrix"
+            }
+          },
+          {
+            "id": "6b27e0964ade0b68",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MAS102/Inner Product.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Inner Product"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9784b4c19a324c2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4eac1fc2a3edb562",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e4a2db28a8048de",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9e7eb0a14441d1fb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "92937209ccd83baf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ee09c28c74712569",
+    "type": "split",
+    "children": [
+      {
+        "id": "01309ddd9dd901b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d81b1fe82a5c3edd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Interval.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Interval"
+            }
+          },
+          {
+            "id": "b7ca60bbde2a97aa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Interval.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Interval"
+            }
+          },
+          {
+            "id": "e62497caa5945103",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "49ca9f1328d72b1e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "KAIST_2024F_Obsidian/MAS109/Matrix.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Matrix"
+            }
+          },
+          {
+            "id": "dea12aa2f7047e0b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dea12aa2f7047e0b",
+  "lastOpenFiles": [
+    "Untitled",
+    "Pasted image 20250210005719.png",
+    "KAIST_2024F_Obsidian/README.md",
+    "KAIST_2024F_Obsidian/MAS109/Matrix.md",
+    "KAIST_2024F_Obsidian/MAS109/Leading Variable.md",
+    "KAIST_2024F_Obsidian/MAS109/Leading Element.md",
+    "Pasted image 20250206030650.png",
+    "KAIST_2024F_Obsidian/MAS109",
+    "KAIST_2024F_Obsidian/MAS102/Inner Product.md",
+    "KAIST_2024F_Obsidian/MAS102/Vector Sum.md",
+    "KAIST_2024F_Obsidian/MAS102/Vector.md",
+    "KAIST_2024F_Obsidian/MAS102/Scalar.md",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022021820.png",
+    "KAIST_2024F_Obsidian/MAS102/Interval.md",
+    "KAIST_2024F_Obsidian/MAS102/Domain.md",
+    "Untitled.canvas",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022021723.png",
+    "KAIST_2024F_Obsidian/MAS102/Norm(length).md",
+    "KAIST_2024F_Obsidian/MAS102/Direction Vector.md",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022015403.png",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022015620.png",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022015815.png",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022015457.png",
+    "KAIST_2024F_Obsidian/MAS102/Cross Product.md",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022015904.png",
+    "KAIST_2024F_Obsidian/MAS102/Pasted image 20241022015801.png",
+    "벡더합.md",
+    "MAS102/벡더합.md",
+    "MAS102/벡터곱.md",
+    "MAS102/Untitled.md",
+    "KAIST_2024F_Obsidian/MAS102"
+  ]
+}
