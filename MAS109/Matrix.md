@@ -15,6 +15,7 @@ m by n matrix[^1]
 ![[Pasted image 20250210234806.png]]
 
 - 행렬 ***A***의 행벡터 표현과 열벡터 표현
+
 ### Square Matrix
 정방행렬, 정사각행렬
 
