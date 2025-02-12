@@ -29,5 +29,10 @@ _m = n_ => 행렬 ***A*** = \[a<sub>ij</sub>]<sub>n x n</sub>를 n차 Square Mat
 ![[Pasted image 20250212221458.png]]
 
 ### Zero Matrix
+$$
+O = [o_{ij}] \in M_{m, n} : \text{zero matrix}\
+\Leftrightarrow o_{ij} = 0, \forall i,j
+$$
 
+#### Footnote
 [^1]:세로x가로임에 주의하자
