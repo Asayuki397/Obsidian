@@ -58,3 +58,39 @@ ka_{m1} & ka_{m2} & \cdots & ka_{mn}
 \end{array} \right]
 
 $$
+#### Basic Properties
+![[Pasted image 20250214225931.png]]
+
+### Multiplication of Matrices
+$$
+AB := \begin{bmatrix}
+c_{ij}
+\end{bmatrix} \in M_{m, n}, c_{ij} := a_{i1}b_{1j} + a_{i2}b_{2j} + \cdot + a_{ip}b_{pj} = \sum_{k = 1}^{p} a_{ik}b_{kj}
+$$
+**Note  : Commutative Property does not hold**$$
+AB \neq BA
+$$
+#### Expression with Row Vector and Column Vector
+$$
+A = \begin{bmatrix}
+a_{ik}
+\end{bmatrix} \in M_{m, p}, B = \begin{bmatrix}
+b_{kj}
+\end{bmatrix} \in M_{p,n}
+$$
+일 때, 다음이 성립한다; 
+$$A_{(i)}B^{(j)} = \begin{bmatrix}
+a_{i1} & a_{i2} & \cdots & a_{ip}
+\end{bmatrix}
+\begin{bmatrix}
+b_{1j} \\ b_{2j} \\ \vdots \\ b_{pj}
+\end{bmatrix} = \sum_{k = 1}^p a_{ik}b_{kj}
+$$
+$$
+(AB)_{(ij)} = A_{(i)} B^{(j)}
+$$
+$$
+AB = \begin{bmatrix}
+{cccc}
+A_{(1)}B^{(1)} & A_{(1)}B^{(2)} & \cdot
+\end{bmatrix}
