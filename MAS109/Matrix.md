@@ -45,6 +45,20 @@ a_{ij}
 \Leftrightarrow
 a_{ij} = 0, \forall i \neq j
 $$
+#### Identity matrix
+$$
+I_{n} := \begin{bmatrix}
+\delta _{ij} 
+\end{bmatrix}
+\in M_{n}
+\Leftrightarrow
+\delta_{ij} := \begin{cases}
+1, (i = j) \\
+0, (i \neq j)
+\end{cases}
+$$
+**Note : $\delta_{ij}$ : Kronecker Symbol, 크로네커기호**
+
 ### Operations
 - [[Matrices Operations]]
 - [[Linear Transformation]]
