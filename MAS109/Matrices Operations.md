@@ -102,7 +102,6 @@ $$
 $$
 ### Exponentiation of Matrices
 $$
-A = \begin{bmatrix}
-a_{ij} 
-\end{bmatrix}
+A^k := AA\cdots A \text{(A의 k제곱)}
 $$
+

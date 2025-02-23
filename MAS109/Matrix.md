@@ -35,7 +35,16 @@ O = [o_{ij}] \in M_{m, n} : \text{zero matrix}\
 \Leftrightarrow o_{ij} = 0, \forall i,j
 $$
 
-
+### Special Matrices
+#### Diagonal Matrix
+$$
+A = \begin{bmatrix}
+a_{ij}
+\end{bmatrix}
+\in M_{n}
+\Leftrightarrow
+a_{ij} = 0, \forall i \neq j
+$$
 ### Operations
 - [[Matrices Operations]]
 - [[Linear Transformation]]
