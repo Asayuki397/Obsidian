@@ -35,5 +35,10 @@ O = [o_{ij}] \in M_{m, n} : \text{zero matrix}\
 \Leftrightarrow o_{ij} = 0, \forall i,j
 $$
 
+
+### Operations
+- [[Matrices Operations]]
+- [[Linear Transformation]]
+
 #### Footnote
 [^1]:세로x가로임에 주의하자

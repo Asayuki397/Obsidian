@@ -91,6 +91,18 @@ $$
 $$
 $$
 AB = \begin{bmatrix}
-{cccc}
-A_{(1)}B^{(1)} & A_{(1)}B^{(2)} & \cdot
+A_{(1)}B^{(1)} & A_{(1)}B^{(2)} & \cdots  & A_{(1)}B^{(n)} \\
+A_{(2)}B^{(1)} & A_{(2)}B^{(2)} & \cdots & A_{(2)}B^{(n)} \\
+\vdots & \vdots &   & \vdots \\
+A_{(m)} B^{(1)} & A_{(m)}B^{(2)} & \cdots & A_{(m)}B^{(n)} \\
 \end{bmatrix}
+$$
+$$
+(AB)_{(i)} = A_{(i)}B, (AB)^{(j)} = AB^{(j)}
+$$
+### Exponentiation of Matrices
+$$
+A = \begin{bmatrix}
+a_{ij} 
+\end{bmatrix}
+$$
