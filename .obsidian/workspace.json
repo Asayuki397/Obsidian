@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "Vector"
             }
+          },
+          {
+            "id": "2b1701259dd6b15a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -206,10 +220,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bfe1b6687e81dd02",
+  "active": "2b1701259dd6b15a",
   "lastOpenFiles": [
-    "README.md",
+    "Untitled.md",
+    "conflict-files-obsidian-git.md",
     "MAS109/Vector.md",
+    "MAS206/Satisfiability.md",
+    "MAS206/Translating from English to Logic.md",
+    "MAS206/Uniqueness Quantifier.md",
+    "MAS206/Quantifiers.md",
+    "MAS206/Predicate Logic.md",
+    "MAS206",
+    "Equivalences in Preicate Logic.md",
+    "README.md",
     "MAS109/Matrix.md",
     "MAS109/Matrices Operations.md",
     "MAS109/Linear Transformation.md",
@@ -239,10 +262,6 @@
     "MAS102/Norm(length).md",
     "MAS102/Direction Vector.md",
     "MAS102/Cross Product.md",
-    "벡더합.md",
-    "MAS102/벡더합.md",
-    "MAS102/벡터곱.md",
-    "MAS102/Untitled.md",
     "MAS102"
   ]
 }
