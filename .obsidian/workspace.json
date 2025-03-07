@@ -11,14 +11,25 @@
             "id": "f5430d5243a51c71",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "MAS109/Matrices Operations.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20250206030650.png"
               },
-              "icon": "lucide-file",
-              "title": "Matrices Operations"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250206030650"
+            }
+          },
+          {
+            "id": "c7eb570518205658",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "Untitled.md",
+                "staged": false
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (Untitled)"
             }
           },
           {
@@ -48,9 +59,22 @@
               "icon": "lucide-file",
               "title": "Vector"
             }
+          },
+          {
+            "id": "2f759a096457f5b9",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/workspace.json",
+                "staged": false
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (workspace.json)"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -206,36 +230,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2e4a2db28a8048de",
+  "active": "c7eb570518205658",
   "lastOpenFiles": [
+    "README.md",
+    "Untitled.md",
+    "CS300",
+    "Equivalences in Preicate Logic.md",
+    "Pasted image 20250206030650.png",
+    "Pasted image 20250210233732.png",
+    "MAS109/Matrices Operations.md",
+    "conflict-files-obsidian-git.md",
+    "MAS109/Vector.md",
     "새 텍스트 문서.txt",
     "새 폴더",
-    "conflict-files-obsidian-git.md",
-    "Untitled.md",
-    "MAS109/Vector.md",
     "MAS206/Satisfiability.md",
     "MAS206/Translating from English to Logic.md",
     "MAS206/Uniqueness Quantifier.md",
     "MAS206/Quantifiers.md",
     "MAS206/Predicate Logic.md",
     "MAS206",
-    "Equivalences in Preicate Logic.md",
-    "README.md",
     "MAS109/Matrix.md",
-    "MAS109/Matrices Operations.md",
     "MAS109/Linear Transformation.md",
     "MAS109/Leading Variable.md",
-    "Pasted image 20250206030650.png",
     "Pasted image 20250214225931.png",
     "Pasted image 20250213033208.png",
     "README.md.md",
     "Pasted image 20250212221458.png",
     "Pasted image 20250212195638.png",
     "Pasted image 20250210234806.png",
-    "Pasted image 20250210233732.png",
     "Untitled.canvas",
     "Pasted image 20250210233209.png",
-    "Untitled",
     "Pasted image 20250210005719.png",
     "KAIST_2024F_Obsidian/README.md",
     "MAS109/Leading Element.md",
