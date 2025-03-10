@@ -14,7 +14,7 @@ $$
 - $-1\leq r \leq 1$
 - $r = 1 \Leftrightarrow y_{i} = a + bX_{i}, b>0$
 - $r = -1 \Leftrightarrow y_{i} = a+bX_{i} b< 0$
-- Sample correlation coefficient of $(a + bX_{i}, c + dy_{i}) \rightarrow \sin bd \cdot r$
+- Sample correlation coefficient of $(a + bX_{i}, c + dy_{i}) \rightarrow \text{(sign of the bd)}\cdot r$
 
 ## Proof
 ### Cauchy-Schwarz inequality

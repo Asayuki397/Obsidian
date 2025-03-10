@@ -45,7 +45,7 @@ a_{ij}
 \Leftrightarrow
 a_{ij} = 0, \forall i \neq j
 $$
-#### Identity matrix
+#### Identity Matrix
 $$
 I_{n} := \begin{bmatrix}
 \delta _{ij} 
@@ -59,6 +59,36 @@ I_{n} := \begin{bmatrix}
 $$
 **Note : $\delta_{ij}$ : Kronecker Symbol, 크로네커기호**
 
+#### Upper Triangular Matrix
+$$
+U = \begin{bmatrix}
+u_{ij}
+\end{bmatrix} \in M_{n}
+\Leftrightarrow
+u_{ij} = 0, \forall i > j
+$$
+#### Lower Triangular Matrix
+$$
+L = \begin{bmatrix}
+l_{ij}
+\end{bmatrix} \in M_{n}
+\Leftrightarrow
+l_{ij} = 0, \forall i < j
+$$
+**Note : $l_{ab} = 1, \forall a = b$ 인 경우 Unit lower triangular matrix라고 한다. 
+
+#### Symmetric Matrix
+$$
+A = \begin{bmatrix}
+a_{ij}
+\end{bmatrix} \in M_{n}
+\Leftrightarrow
+A^t = A
+$$
+**Note 주대각원소를 중심으로 원소들이 대칭인 배열을 한다.**
+
+#### Skew Symmetric Matrix
+TODO
 ### Operations
 - [[Matrices Operations]]
 - [[Linear Transformation]]
