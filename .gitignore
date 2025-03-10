@@ -1,5 +1,10 @@
+.git/
 workspace.json
 .json
 .obsidian/
 .obsidian/workspace.json
+<<<<<<< HEAD
 .obsidian/workspace.json
+=======
+.obsidian/workspace.json
+>>>>>>> origin/master
