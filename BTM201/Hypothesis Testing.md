@@ -11,3 +11,9 @@ Alternative Hypothesis $\mu > 0$
 Null Hypothesis $\mu \leq 0$
 
 We have to support *Alternative Hypothesis*
+
+## How to support argument?
+does p-value need to be smaller? bigger? -> smaller
+- There is a critical criteria -> usually 0.1 0.05 0.01 criteria
+does [[Standardized Normal Distribution|z-value]] need to be smaller? bigger -> bigger
+#Midterm
