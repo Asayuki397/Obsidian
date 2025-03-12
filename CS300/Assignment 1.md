@@ -71,4 +71,4 @@ If $n = 1, T(1) \leq 0$, which may not hold.
 
 Let's use the form $T(k) \leq c_{1}(k - c_{2}) \log(k-c_{2})$ from the hint.
 
-
+$similar$
