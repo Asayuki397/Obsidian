@@ -3,3 +3,4 @@
 
 # Why bits?
 - Easy to store with [[Bistable]] elements
+- Reliably transmitted on noisy and inaccurate wires
