@@ -39,6 +39,11 @@ The two values are:
 $$
 \frac{{213+\sqrt{ 61 }}}{2}, \frac{{213- \sqrt{ 61 }}}{2}
 $$
+
+
+
+
+
 # 26
 ## A
 | Stem | Leaves          |
@@ -94,6 +99,12 @@ $$
 $$
 The observed proportion is greater than the lower bound given by the Chebyshev's inequality.
 
+
+
+
+
+
+
 # 33
 Compute the sample pearson correlation coefficient:
 $$
@@ -114,6 +125,14 @@ We get:
 $$
 r = \frac{163.2}{269.2} \approx 0.606
 $$
+
+
+
+
+
+
+
+
 # 40
 
 ![[output (2).png]]
