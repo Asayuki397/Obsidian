@@ -15,3 +15,20 @@ $[2,1,4,7,8,9,5]$
 Final index of `pivot` = 2
 # (b)
 
+Worst case occurs when each `RANDOMIZED-PARTITION` consistently selects the largest or smallest element as pivot. It causes highly unbalanced partitions.
+
+- Initially: Select pivot = 9, partitions into `[8, 2, 5, 7, 1, 4]` and `[]`
+- Next step: Select pivot = 8, partitions into `[2, 5, 7, 1, 4]` and `[]`
+- Next: pivot = 7, partitions `[2, 5, 1, 4]` and `[]`
+- Next: pivot = 5, partitions `[2, 1, 4]` and `[]`
+- Next: pivot = 4, partitions `[2, 1]` and `[]`
+- Next: pivot = 2, partitions `[1]` and `[]`
+
+Recursion depth `n-1`
+Complexity of sorting $\Theta(n^2)$ 
+
+# (c)
+
+Best case scenario : The pivot always splits the array evenly.
+- Height of the recursion tree : $\Theta(\log n)$
+The total number of calls 
