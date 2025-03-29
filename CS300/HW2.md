@@ -62,6 +62,28 @@ Thus, the lower bound for sorting a bitonic array, using comparison-based sortin
 
 ## (c)
 
+- **Find the peak element**:
+    
+    - Traverse the array from left to right.
+        
+    - Compare each element to its successor until the first element greater than its successor is found. The first decreasing point indicates the peak. (This step requires O(n) time in the worst-case scenario.)
+        
+- **Split the array into two subarrays**:
+    
+    - First subarray (left side of peak) is strictly increasing.
+        
+    - Second subarray (right side of peak) is strictly decreasing.
+        
+- **Reverse the second subarray**:
+    
+    - Reverse the second subarray to transform it from decreasing to increasing. (This operation requires O(n) time.)
+        
+- **Merge both increasing subarrays**:
+    
+    - Both subarrays are now sorted in increasing order. Merge them into one fully sorted array.
+        
+    - Merging two sorted arrays can be done in O(n) time by using a standard merge procedure from merge sort.
+
 **Overall Complexity**:
 
 - Finding peak: O(n)
