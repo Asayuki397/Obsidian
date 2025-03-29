@@ -91,3 +91,150 @@ Thus, the lower bound for sorting a bitonic array, using comparison-based sortin
 - Merging two sorted subarrays: O(n)
 
 **Total Complexity:** O(n)
+
+# 3
+## (a)
+
+### Step 1: Breaking Down the Algorithm
+
+- Divide the $n$ elements into groups of **9** elements.
+    
+- There are $\lceil n/9 \rceil$ such groups.
+    
+- Find the median of each group (5th smallest element out of 9) using brute-force, which is $O(1)$ for each group since the group size is constant (9).
+    
+- Thus, finding medians of all groups takes $O(n)$.
+    
+
+### Step 2: Finding the Median-of-Medians
+
+- Recursively apply MY-SELECT to find the median of these medians.
+    
+- The recursion operates on $m = \left\lceil  \frac{n}{9}  \right\rceil$ elements.
+    
+
+### Step 3: Partitioning Based on the Median-of-Medians
+
+- Partition the original array using the median-of-medians (MOM).
+    
+- This partitioning takes $O(n)$ time.
+    
+
+### Step 4: Estimating Recursion Size
+
+When we pick MOM from groups of size 9, how many elements can we guarantee to eliminate?
+
+- At least half of the medians ($\frac{1}{2} \times m$) are smaller or equal to MOM.
+    
+- Each median corresponds to a group of 9 elements.
+    
+- Thus, at least half of these groups have 5 elements ≤ MOM (including the median itself).
+    
+- Thus, number of elements guaranteed to be ≤ MOM is at least:
+    
+
+$$
+5 \times \frac{1}{2}\left\lceil\frac{n}{9}\right\rceil \approx \frac{5n}{18}
+$$
+### Step 5: Recurrence Analysis
+
+Thus, we can guarantee at least $\frac{5n}{18}$​ elements are smaller or equal (and similarly, at least $\frac{5n}{18}$​ larger or equal), which ensures recursion on at most:
+
+$$
+n - \frac{5n}{18} = \frac{13n}{18}​
+$$
+The recurrence becomes:
+
+$$
+T(n) \le T\left(\frac{n}{9}\right) + T\left(\frac{13n}{18}\right) + O(n)
+$$
+
+Let's intuitively verify this is still linear ($O(n)$):
+
+- The total cost is bounded by two subproblems of fractions summing significantly less than nnn.
+    
+- Using the Master theorem or recursion tree methods, the recurrence leads to $O(n)$.
+    
+
+Thus, **MY-SELECT with groups of size 9 remains O(n)**.
+
+## (b)
+When duplicates are allowed, the partition step can fail to reduce the problem size significantly:
+
+- The key to the linear complexity is the guaranteed elimination of a fraction of elements at each step.
+	
+- With duplicates, MY-PARTITION could return an extremely unbalanced partition:
+    
+    - If the chosen pivot (MOM) equals many duplicates, partitioning might place nearly all elements on one side.
+        
+    - For example, if nearly all elements equal MOM, MY-PARTITION could return a very skewed partition, with almost no reduction in array size for subsequent recursive calls.
+        
+- This could lead to recursive calls that shrink only slightly at each iteration, resulting in a recurrence resembling:
+$$T(n) \approx T(n-c) + O(n)$$
+    where $c$ could be small or constant, thus resulting in worst-case $O(n^2)$ complexity.
+
+Thus, duplicates break the guaranteed fraction reduction required for linear complexity.
+
+## (c)
+
+he main idea is **3-way partitioning** to handle duplicates efficiently:
+
+### Modified MY-PARTITION (3-way partition):
+
+Instead of partitioning into two segments, partition into 3 segments based on pivot $x$:
+
+Elements less than pivot $x$ , Elements equal to pivot $x$, Elements greater than pivot $x$
+
+**Algorithm**
+```
+MY-3WAY-PARTITION(A[1..n], x):
+  lt = 1, i = 1, gt = n
+  while i ≤ gt do:
+    if A[i] < x:
+      swap A[lt] ↔ A[i]
+      lt = lt + 1, i = i + 1
+    else if A[i] > x:
+      swap A[i] ↔ A[gt]
+      gt = gt - 1
+    else:
+      i = i + 1
+  return lt, gt
+
+```
+
+This is clearly O(n)
+
+## Modified MY-SELECT algorithm
+
+Change partitioning step to use MY-3WAY-PARTITION and then recurse accordingly
+
+```
+MY-SELECT(A[1..n], k):
+  if n ≤ 81:
+    solve using brute force
+  else:
+    m = ⌈n/9⌉
+    for i = 1 to m do:
+      B[i] = MY-SELECT(A[9i−8..9i], 5)
+    mom = MY-SELECT(B[1..m], ⌊m/2⌋)
+    
+    lt, gt = MY-3WAY-PARTITION(A[1..n], mom)
+    
+    if k < lt:
+      return MY-SELECT(A[1..lt−1], k)
+    else if k ≤ gt:
+      return mom  # Since k-th element is equal to pivot
+    else:
+      return MY-SELECT(A[gt+1..n], k−gt)
+
+```
+
+## Complexity analysis
+
+- MY-3WAY-PARTITION ensures efficient partitioning even with duplicates.
+    
+- Each recursive call eliminates a guaranteed fraction of elements, maintaining linear complexity:
+    
+    - With 3-way partition, duplicates clustered at the pivot are separated efficiently.
+        
+    - Thus, subsequent recursive calls are guaranteed to operate on reduced array sizes significantly.
