@@ -1,0 +1,1 @@
+A bit that determines whether number is negative or positive
