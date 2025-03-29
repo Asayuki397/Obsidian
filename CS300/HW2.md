@@ -1,6 +1,7 @@
 20240625 장민혁
 
-# (a)
+# 1
+## (a)
 
 | j   | A[j] | A[j] ≤ 4? | Changes (i, swap)                  | A                                                 |
 | --- | ---- | --------- | ---------------------------------- | ------------------------------------------------- |
@@ -13,7 +14,7 @@
 Final result after `PARTITION` : 
 $[2,1,4,7,8,9,5]$
 Final index of `pivot` = 2
-# (b)
+## (b)
 
 Worst case occurs when each `RANDOMIZED-PARTITION` consistently selects the largest or smallest element as pivot. It causes highly unbalanced partitions.
 
@@ -27,8 +28,44 @@ Worst case occurs when each `RANDOMIZED-PARTITION` consistently selects the larg
 Recursion depth `n-1`
 Complexity of sorting $\Theta(n^2)$ 
 
-# (c)
+## (c)
 
-Best case scenario : The pivot always splits the array evenly.
-- Height of the recursion tree : $\Theta(\log n)$
-The total number of calls 
+- **Best-case scenario:**  
+    In the best case, the pivot always splits the array evenly (balanced partition), resulting in the height of the recursion tree being `Θ(log n)`.  
+    At each recursion level, a total of exactly `n` elements are partitioned. The total number of calls to RANDOM matches the number of calls to RANDOMIZED-PARTITION, which occurs once per partitioning. Thus, each element is chosen exactly once as pivot, resulting in exactly `n` RANDOM calls in total.  
+    **Best-case complexity of RANDOM calls:**  
+    **Θ(n)**
+    
+- **Worst-case scenario:**  
+    In the worst case, the partitions are extremely unbalanced. One side always has size `0`, and the other side size `n-1`. This means the algorithm recursively selects pivots `n` times (once per recursion), each pivot choice invoking RANDOM exactly once. Again, this totals exactly `n` RANDOM calls.  
+    **Worst-case complexity of RANDOM calls:**  
+    **Θ(n)**
+
+# 2
+
+## (a)
+**No**, such a permutation does not exist. Every permutation π has the possibility to sort at least one particular bitonic array. Here's why:
+
+- Consider a bitonic array as an increasing sequence up to a single peak and then decreasing.
+- Each permutation π corresponds to some ordering of elements. It is always possible to construct a bitonic array specifically matching this permutation's sorted order, by carefully choosing elements in increasing order up to a maximum, and then decreasing afterward.
+- Therefore, there does not exist a single permutation π that would fail for every bitonic array. Every permutation can correctly sort at least one specially crafted bitonic array.
+
+## (b)
+
+- The lower bound Ω(n log n) for comparison-based sorting algorithms applies generally because sorting n elements requires distinguishing among all possible permutations (n! permutations), and this inherently requires at least log(n!) = Ω(n log n) comparisons.
+- However, for a bitonic array, the number of possible permutations is significantly restricted.
+- Specifically, a bitonic array with distinct elements has exactly one peak and therefore only a linear number of possible ways to position this peak. Once the peak position is fixed, the array before and after the peak are monotonically increasing and decreasing, respectively, greatly restricting the structure of possible permutations.
+- The key observation is that a bitonic array of length n can be uniquely identified by determining the peak position. Identifying this peak involves at most **n comparisons** (by comparing consecutive elements to detect a decrease).
+- Thus, the decision tree depth (number of comparisons) necessary to determine the ordering for any bitonic array is at least proportional to the **linear task** of identifying the peak position, hence Ω(n).
+
+Thus, the lower bound for sorting a bitonic array, using comparison-based sorting, is **Ω(n)**.
+
+## (c)
+
+**Overall Complexity**:
+
+- Finding peak: O(n)
+- Reversing second subarray: O(n)
+- Merging two sorted subarrays: O(n)
+
+**Total Complexity:** O(n)
