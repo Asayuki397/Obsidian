@@ -441,6 +441,42 @@ $$
 
 ## (c)
 
+Label the five coin flips as $A,B,C,D,E$. The two conditions are:
+
+- **Condition C:** Among flips $A,B,C$ there are at least 2 heads.
+    
+- **Condition D:** Among flips $C,D,E$ there are at least 2 tails.
+    
+
+Notice that flip C appears in both groups. We'll consider two cases based on the outcome of flip C.
+
+#### **Case 1:** C = H
+
+- **For Condition C:** With C = H, we need at least one more head from flips A and B. The possible outcomes for (A,B) that have at least one head are: HT, TH, or HH. That gives 3 possibilities.
+
+- **For Condition D:** With C = H, to have at least 2 tails in (C, D, E), both D and E must be tails. There is 1 possibility.
+
+Thus, total outcomes in Case 1: $3 \times 1 = 3$.
+
+#### **Case 2:** C = T
+
+- **For Condition C:** With C = T, we need both A and B to be heads to achieve at least 2 heads. There is 1 possibility (HH).
+
+- **For Condition D:** With C = T, we already have one tail. Now we need at least one tail from flips D and E. The outcomes for (D,E) with at least one tail are: HT, TH, or TT. That gives 3 possibilities.
+
+Thus, total outcomes in Case 2: $1 \times 3 = 3$.
+
+Adding both cases:
+
+$$
+\text{Favorable outcomes} = 3+3 = 6
+$$
+
+Since there are $2^5$ total outcomes for five coin flips, the probability is:
+
+$$
+\text{Probability} = \frac{6}{32} = \frac{3}{16}
+$$
 # 40
 
 # 45
