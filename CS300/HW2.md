@@ -58,7 +58,7 @@ Complexity of sorting $\Theta(n^2)$
 - The key observation is that a bitonic array of length n can be uniquely identified by determining the peak position. Identifying this peak involves at most **n comparisons** (by comparing consecutive elements to detect a decrease).
 - Thus, the decision tree depth (number of comparisons) necessary to determine the ordering for any bitonic array is at least proportional to the **linear task** of identifying the peak position, hence Ω(n).
 
-Thus, the lower bound for sorting a bitonic array, using comparison-based sorting, is **Ω(n)**.
+Hence, under the **decision-tree model**, the sorting lower bound for bitonic arrays is **Ω(n)**, not Ω(n log n).
 
 ## (c)
 
@@ -177,7 +177,7 @@ Thus, duplicates break the guaranteed fraction reduction required for linear com
 
 ## (c)
 
-he main idea is **3-way partitioning** to handle duplicates efficiently:
+The main idea is **3-way partitioning** to handle duplicates efficiently:
 
 ### Modified MY-PARTITION (3-way partition):
 
@@ -237,4 +237,4 @@ MY-SELECT(A[1..n], k):
     
     - With 3-way partition, duplicates clustered at the pivot are separated efficiently.
         
-    - Thus, subsequent recursive calls are guaranteed to operate on reduced array sizes significantly.
+- Thus, subsequent recursive calls are guaranteed to operate on reduced array sizes significantly.
