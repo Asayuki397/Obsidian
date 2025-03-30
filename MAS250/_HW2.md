@@ -240,9 +240,7 @@ $$
 $$
 P(B<Y<R \mid \text{no two dice equal}) = \frac{1}{6}
 $$
-
 Thus,
-
 $$
 P(B<Y<R) = \frac{1}{6} \times \frac{5}{9} = \frac{5}{54}
 $$
@@ -257,7 +255,6 @@ $$
 We must choose three distinct numbers from the set \{1,2,3,4,5,6\}, and order them uniquely as $B < Y < R$:
 
 - Number of ways to select three distinct numbers from six: $\binom{6}{3}$
-    
 - For each choice of three distinct numbers, there is exactly **one ordering** out of the $3! = 6$ that satisfies the strict order $B < Y < R$.
 
 Thus, total outcomes satisfying $B < Y < R$ is:
@@ -265,9 +262,64 @@ Thus, total outcomes satisfying $B < Y < R$ is:
 $$
 \binom{6}{3} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20
 $$
+## (f)
 
+Using results from (d) and (e):
+- Number of outcomes with $B < Y < R : 20$
+- Total outcomes: 216
+
+Thus,
+
+$$
+P(B < Y < R ) = \frac{20}{216} = \frac{5}{54}
+$$
+
+which matches exactly our answer to (c).
 # 29
 
+- Let $W$ be the event that your neighbor **waters** the plant.
+    
+- Let $W^c$ be the event that your neighbor **forgets** to water the plant.
+    
+- Let $D$ be the event that the plant **dies**.
+    
+- Let $D^c$ be the event that the plant remains **alive**.
+
+## (a)
+
+We use total probability here:
+
+$$
+P(D^c) = P(D^c|W)P(W) + P(D^c|W^c)P(W^c)
+$$
+
+Plugging in values, we get:
+
+$$
+P(D^c) = (0.85)(0.9) + (0.2)(0.1) = 0.765 + 0.02 = 0.785
+$$
+
+Thus, the probability the plant is alive when you return is **0.785**
+
+## (b)
+
+We use **Bayes' theorem** here. The probability we want is $P(W^c|D)$:
+
+$$
+P(W^c|D) = \frac{P(D|W^c)P(W^c)}{P(D)}
+$$
+
+First, calculate the total probability the plant dies $P(D)$:
+$$
+P(W^c) = (0.15)(0.9) + (0.8)(0.1) = 0.135 + 0.08 = 0.215
+$$
+Now, applying Bayes’ theorem:
+
+$$
+P(W^c|D) = \frac{(0.8)(0.1)}{0.215} = \frac{0.08}{0.215} \approx 0.3721
+$$
+
+Thus, the probability your neighbor forgot to water the plant given it is dead is approximately: **0.3721**
 # 36
 
 # 39
