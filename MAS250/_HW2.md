@@ -322,6 +322,55 @@ $$
 Thus, the probability your neighbor forgot to water the plant given it is dead is approximately: **0.3721**
 # 36
 
+## (a)
+
+- First, we find probabilities individually:
+
+$$
+P(E) = \frac{\text{number of outcomes where sum = 7}}{\text{total outcomes}}
+$$
+
+There are 6 ways to roll a sum of 7:
+
+$$
+(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)
+$$
+Thus:
+
+$$
+P(E) = \frac{6}{36} = \frac{1}{6}
+$$
+
+- The probability the first die lands on 4 is clearly:
+
+$$
+P(F) = \frac{6}{36} = \frac{1}{6}
+$$
+
+- Now, we compute conditional probability $P(E|F)$:
+
+
+If the first die lands on 4, outcomes are: $(4,1),(4,2),(4,3),(4,4),(4,5),(4,6)$. 
+Only one outcome $(4,3)$ sums to 7, thus:
+
+$$
+P(E|F) = \frac{1}{6}
+$$
+
+- To check independence, we must verify:
+
+$$
+P(E|F) = P(E)
+$$
+
+Indeed, we have:
+
+$$
+P(E|F) = \frac{1}{6} = P(E)
+$$
+
+Thus, event $E$ and event $F$ are independent.
+
 # 39
 
 # 40
