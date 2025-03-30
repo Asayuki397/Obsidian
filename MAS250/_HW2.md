@@ -371,6 +371,25 @@ $$
 
 Thus, event $E$ and event $F$ are independent.
 
+## (b)
+
+- We already have:
+$$
+P(E) = \frac{1}{6}
+$$
+- Probability the second die lands on 3: $$
+P(G) = \frac{6}{36} = \frac{1}{6}
+$$
+- Compute the conditional probability $P(E|G)$:
+
+The outcomes when second die lands on 3 : $(1,3),(2,3),(3,3),(4,3),(5,3),(6,3)$
+Only one outcome $(4,3)$ sums to 7, thus:
+
+$$
+P(E|G) = \frac{1}{6} = P(E)
+$$
+Thus, event $E$ and event $G$ are also independent.
+
 # 39
 
 # 40
