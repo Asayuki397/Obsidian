@@ -391,6 +391,55 @@ $$
 Thus, event $E$ and event $G$ are also independent.
 
 # 39
+## (a)
+
+Two possible cases:
+
+- HHH _ _
+- TTT _ _
+
+Both has $2^2$ possibilities. Thus total outcomes satisfying condition:
+
+$$
+4+4 = 8
+$$
+Hence, probability is:
+
+$$
+P = \frac{8}{32} = \frac{1}{4}
+$$
+
+## (b)
+
+Define events:
+
+- $A$: first three flips are the same.
+- $B$: last three flips are the same.
+
+We already have from (a):
+- $P(A) = \frac{1}{4}$
+
+Similarly, event $B$ also has probability:
+- Last three flips same:
+    - _ _ HHH: 4 ways
+    - _ _ TTT: 4 ways  
+        Total: 8 ways, hence:
+$$
+P(B) = \frac{8}{32} = \frac{1}{4}
+$$
+- Next, calculate intersection $P(A\cap B)$ to subtract double counting:
+
+There are only two : HHHHH and TTTTT
+
+Thus:
+$$
+P(A\cap B) = \frac{2}{32} = \frac{1}{16}
+$$
+$$
+P(A\cup B) = \frac{1}{4} + \frac{1}{4} - \frac{1}{16} = \frac{7}{16}
+$$
+
+## (c)
 
 # 40
 
