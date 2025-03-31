@@ -58,9 +58,9 @@ $$
 $$
 It uniquely determines distribution of [[Random Variable]]
 
-- Let $X : Poi(\lambda)$
+- Thinning property of Poisson
 
-	Every element in X many things is classified as being one of types of $1, 2, \dots, r$ with probability $p_{1}, \dots, p_{r}$ Then, number of k-type = $Poi(p_{k}\lambda)$ & they are independent
+	Let $X : Poi(\lambda)$, Every element in X many things is classified as being one of types of $1, 2, \dots, r$ with probability $p_{1}, \dots, p_{r}$ Then, number of k-type = $Poi(p_{k}\lambda)$ & they are independent
 # Theorem
 
 When $n \to \infty$ and $\lambda$ is fixed, you get:
