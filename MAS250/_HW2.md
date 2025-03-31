@@ -371,6 +371,10 @@ $$
 
 Thus, event $E$ and event $F$ are independent.
 
+$$
+
+$$
+
 ## (b)
 
 - We already have:
