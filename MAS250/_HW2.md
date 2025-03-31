@@ -162,13 +162,13 @@ This completes the algebraic proof.
 
 ### **Combinatorial Argument (Intuitive Proof):**
 
-Consider a set S of nnn distinct items. Fix attention on one particular item, call it x.
+Consider a set S of n distinct items. Fix attention on one particular item, call it x.
 
 Now, let's count how many different subsets of size r can be formed from the set S:
 
 - Subsets containing the item x:
     
-    To form a subset of size r containing the fixed item xxx, we must select the remaining r−1 items from the other n - 1 available items. The number of ways to do this is:
+    To form a subset of size r containing the fixed item x, we must select the remaining r−1 items from the other n - 1 available items. The number of ways to do this is:
     
 
 $$
@@ -195,7 +195,7 @@ This combinatorial argument directly demonstrates the identity.
 
 ## (a)
 
-Each die is a six-sided die, and thus each has 6 outcomes. Hence, total outcomes = $6 \times 6 \times 6 = 2166$
+Each die is a six-sided die, and thus each has 6 outcomes. Hence, total outcomes = $6 \times 6 \times 6 = 216$
 
 - Number of outcomes with **no two dice equal**:  
     The first die (say Blue) can show **any of 6 numbers**.  
