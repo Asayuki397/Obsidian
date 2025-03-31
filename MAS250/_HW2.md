@@ -589,7 +589,7 @@ Assume the following situation:
 - Because the team that wins the first game already has one win, it needs at least 3 wins in the remaining 6 games to secure a total of 4 wins.
     
 
-Under the assumption that each game is independent and each team has a 50–50 chance (i.e. probability 12\frac{1}{2}21​ for each game), the probability that the team wins at least 3 of the next 6 games is calculated by summing the probabilities for winning exactly 3, 4, 5, or all 6 games:
+Under the assumption that each game is independent and each team has a 50–50 chance (i.e. probability $\frac{1}{2}$ for each game), the probability that the team wins at least 3 of the next 6 games is calculated by summing the probabilities for winning exactly 3, 4, 5, or all 6 games:
 
 $$
 P(W) = \sum_{i=3}^{6} \binom{6}{i} \left(\frac{1}{2}\right)^6
