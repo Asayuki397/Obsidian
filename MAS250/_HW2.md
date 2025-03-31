@@ -168,7 +168,7 @@ Now, let's count how many different subsets of size r can be formed from the set
 
 - Subsets containing the item x:
     
-    To form a subset of size rrr containing the fixed item xxx, we must select the remaining r−1 items from the other n - 1 available items. The number of ways to do this is:
+    To form a subset of size r containing the fixed item xxx, we must select the remaining r−1 items from the other n - 1 available items. The number of ways to do this is:
     
 
 $$
@@ -177,7 +177,7 @@ $$
 
 - Subsets NOT containing the item x:
     
-    To form a subset of size rrr without the fixed item x, we must choose all rrr items from the remaining n - 1 available items. The number of ways to do this is:
+    To form a subset of size r without the fixed item x, we must choose all r items from the remaining n - 1 available items. The number of ways to do this is:
     
 
 $$
@@ -544,6 +544,80 @@ $$
 1 - (0.5)^n - (0.8)^n + (0.3)^n
 $$
 # 45
-# 47
+## (a)
+
+One way to look at a series is to focus on the deciding  part when both teams are equally positioned. Suppose that after several games the remaining wins needed for each team is 3. Then:
+
+- One team’s chance of winning the next 3 games (and thus the series) is $p^3$.
+- The other team’s chance is $(1-p)^3$.
+
+Since one of these outcomes must occur, the probability that the team with win–probability p wins the series is the ratio of its chance to win all its remaining games over the total chance for either team:
+
+$$
+p_A = \frac{p^3}{p^3 + (1-p)^3}
+$$
+This fraction gives the desired probability under the assumption that the final “race” is a matter of winning 3 games.
+
+## (b)
+Here the idea is to break the overall probability into two cases based on which team is ahead:
+
+1. **If Team A is ahead:**  
+    The chance they win the series is increased. In a simplified model, if they need to win fewer games, one way to express this is by calculating the probability that they do _not_ lose all the remaining opportunities. For example, if they need to win at least one out of 4 remaining games, the probability they do not lose all four is
+    $$
+1 - (1-p)^4
+$$
+2. **If Team A is behind:**  
+    Then they must overcome the deficit. In a symmetric fashion (with roles reversed), the probability they overcome it can be written as
+    $$
+1-p^4
+$$
+
+If we denote by $p_{A}$​ the probability that team A is ahead, then by the law of total probability the overall chance that team A wins the series is
+
+$$
+p_A \Bigl(1 - (1-p)^4\Bigr) + (1-p_A)\Bigl(1 - p^4\Bigr)
+$$
+
+This expression averages the chances over the two scenarios, weighted by the probability of being ahead or behind.
+
+## (c)
+
+Assume the following situation:
+
+- Two teams are playing a series (for example, best-of-7) and the first game has been won by one team.
+- To decide the series, imagine that even after a team reaches 4 wins the teams keep playing a total of 7 games.
+- Because the team that wins the first game already has one win, it needs at least 3 wins in the remaining 6 games to secure a total of 4 wins.
+    
+
+Under the assumption that each game is independent and each team has a 50–50 chance (i.e. probability 12\frac{1}{2}21​ for each game), the probability that the team wins at least 3 of the next 6 games is calculated by summing the probabilities for winning exactly 3, 4, 5, or all 6 games:
+
+$$
+P(W) = \sum_{i=3}^{6} \binom{6}{i} \left(\frac{1}{2}\right)^6
+$$
+
+Let’s break down the sum:
+
+
+- For $i = 3:\binom{6}{3} = 20$
+- For $i = 4: \binom{6}{4} = 15$
+- For $i = 5 : \binom{6}{5} = 6$
+- For $i = 6 : \binom{6}{6} = 1$
+
+Thus,
+
+$$
+P(W) = \frac{20 + 15 + 6 + 1}{64} = \frac{42}{64} = \frac{21}{32}
+$$
+
+This means that if a team wins the first game, it wins the series with probability $\frac{21}{32}$
 
 # 51
+
+Let's denote the three distinct values by $x_1 < x_2 < x_3$​. The cards A, B, and C receive these values uniformly at random. Notice that the event "the smaller of the values on A and B is smaller than the value on C" is equivalent to saying that card C does not hold the smallest value overall.
+
+Since each card is equally likely to receive any of the three values, the probability that card C gets the smallest value $x_1$ is $\frac{1}{3}$​. Therefore, the probability that card C does not have the smallest value is:
+
+$$
+1-\frac{1}{3 } = \frac{2}{3}
+$$
+The answer is $\frac{2}{3}$
