@@ -1,6 +1,6 @@
 # 11
 
-## **Base case (n = 2)
+## **Base case (n = 2)**
 
 $$
 P(A \cup B) = P(A)  + P(B)  - P(A \cap B )
@@ -12,7 +12,7 @@ P(A\cup B) \geq P(A)+P(B)
 $$
 Boole's inequality holds
 
-## **Inductive Step (Finite case)
+## **Inductive Step (Finite case)**
 
 Assume Boole's inequality holds for n events:
 
@@ -121,7 +121,7 @@ $$
 This completes the proof.
 # 17
 
-## **Algebraic Proof**:
+## **Algebraic Proof:**
 Recall the definition of binomial coefficients:
 
 $$
