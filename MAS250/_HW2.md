@@ -316,10 +316,10 @@ $$
 Now, applying Bayes’ theorem:
 
 $$
-P(W^c|D) = \frac{(0.8)(0.1)}{0.215} = \frac{0.08}{0.215} \approx 0.3721
+P(W^c|D) = \frac{(0.8)(0.1)}{0.215} = \frac{0.08}{0.215} = \frac{16}{43}
 $$
 
-Thus, the probability your neighbor forgot to water the plant given it is dead is approximately: **0.3721**
+Thus, the probability your neighbor forgot to water the plant given it is dead is $\frac{16}{43}$
 # 36
 
 ## (a)
@@ -482,7 +482,67 @@ $$
 \text{Probability} = \frac{6}{32} = \frac{3}{16}
 $$
 # 40
+Let
 
+- A be the event that outcome 1 never occurs in n trials, and
+- B be the event that outcome 2 never occurs in n trials.
+
+**Step 1. Calculate the probability of A:**  
+If outcome 1 never occurs, each trial results in either 0 or 2. The probability of either 0 or 2 is:
+
+$$
+P(0 \text{ or } 2) = 0.3 + 0.2 = 0.5
+$$
+
+Since the trials are independent, the probability that outcome 1 never appears in all nnn trials is:
+
+$$
+P(A) = (0.5)^n
+$$
+
+**Step 2. Calculate the probability of B:**  
+If outcome 2 never occurs, each trial results in either 0 or 1. The probability of either 0 or 1 is:
+
+$$
+P(0 \text{ or } 1) = 0.3 + 0.5 = 0.8
+$$
+
+Thus, the probability that outcome 2 never appears in all n trials is:
+
+$$
+P(B) = (0.8)^n
+$$
+**Step 3. Calculate the probability of A∩BA \cap BA∩B:**  
+This is the event that neither outcome 1 nor outcome 2 occurs, meaning every trial results in 0. The probability for each trial is:
+
+$$
+P(0) = 0.3
+$$
+
+So, for n trials:
+
+$$
+P(A \cap B) = (0.3)^n
+$$
+
+**Step 4. Use the complement (via inclusion-exclusion):**  
+We want the probability that both outcome 1 and outcome 2 occur at least once, which is the complement of the event that either outcome 1 or outcome 2 does not occur. Thus, by the principle of inclusion-exclusion:
+
+$$
+P(\text{both 1 and 2 occur}) = 1 - \left[P(A) + P(B) - P(A \cap B)\right]
+$$
+
+Substitute the probabilities:
+
+$$
+P(\text{both 1 and 2 occur}) = 1 - \left[(0.5)^n + (0.8)^n - (0.3)^n\right]
+$$
+
+**Final Answer:**
+
+$$
+1 - (0.5)^n - (0.8)^n + (0.3)^n
+$$
 # 45
 # 47
 
