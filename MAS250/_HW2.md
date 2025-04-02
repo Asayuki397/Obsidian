@@ -1,6 +1,6 @@
 # 11
 
-## **Base case (n = 2)
+## **Base case (n = 2)**
 
 $$
 P(A \cup B) = P(A)  + P(B)  - P(A \cap B )
@@ -12,7 +12,7 @@ P(A\cup B) \geq P(A)+P(B)
 $$
 Boole's inequality holds
 
-## **Inductive Step (Finite case)
+## **Inductive Step (Finite case)**
 
 Assume Boole's inequality holds for n events:
 
@@ -121,7 +121,7 @@ $$
 This completes the proof.
 # 17
 
-## **Algebraic Proof**:
+## **Algebraic Proof:**
 Recall the definition of binomial coefficients:
 
 $$
@@ -162,13 +162,13 @@ This completes the algebraic proof.
 
 ### **Combinatorial Argument (Intuitive Proof):**
 
-Consider a set S of nnn distinct items. Fix attention on one particular item, call it x.
+Consider a set S of n distinct items. Fix attention on one particular item, call it x.
 
 Now, let's count how many different subsets of size r can be formed from the set S:
 
 - Subsets containing the item x:
     
-    To form a subset of size rrr containing the fixed item xxx, we must select the remaining r−1 items from the other n - 1 available items. The number of ways to do this is:
+    To form a subset of size r containing the fixed item x, we must select the remaining r−1 items from the other n - 1 available items. The number of ways to do this is:
     
 
 $$
@@ -177,7 +177,7 @@ $$
 
 - Subsets NOT containing the item x:
     
-    To form a subset of size rrr without the fixed item x, we must choose all rrr items from the remaining n - 1 available items. The number of ways to do this is:
+    To form a subset of size r without the fixed item x, we must choose all r items from the remaining n - 1 available items. The number of ways to do this is:
     
 
 $$
@@ -195,7 +195,7 @@ This combinatorial argument directly demonstrates the identity.
 
 ## (a)
 
-Each die is a six-sided die, and thus each has 6 outcomes. Hence, total outcomes = $6 \times 6 \times 6 = 2166$
+Each die is a six-sided die, and thus each has 6 outcomes. Hence, total outcomes = $6 \times 6 \times 6 = 216$
 
 - Number of outcomes with **no two dice equal**:  
     The first die (say Blue) can show **any of 6 numbers**.  
@@ -316,10 +316,10 @@ $$
 Now, applying Bayes’ theorem:
 
 $$
-P(W^c|D) = \frac{(0.8)(0.1)}{0.215} = \frac{0.08}{0.215} \approx 0.3721
+P(W^c|D) = \frac{(0.8)(0.1)}{0.215} = \frac{0.08}{0.215} = \frac{16}{43}
 $$
 
-Thus, the probability your neighbor forgot to water the plant given it is dead is approximately: **0.3721**
+Thus, the probability your neighbor forgot to water the plant given it is dead is $\frac{16}{43}$
 # 36
 
 ## (a)
@@ -482,8 +482,142 @@ $$
 \text{Probability} = \frac{6}{32} = \frac{3}{16}
 $$
 # 40
+Let
 
+- A be the event that outcome 1 never occurs in n trials, and
+- B be the event that outcome 2 never occurs in n trials.
+
+**Step 1. Calculate the probability of A:**  
+If outcome 1 never occurs, each trial results in either 0 or 2. The probability of either 0 or 2 is:
+
+$$
+P(0 \text{ or } 2) = 0.3 + 0.2 = 0.5
+$$
+
+Since the trials are independent, the probability that outcome 1 never appears in all nnn trials is:
+
+$$
+P(A) = (0.5)^n
+$$
+
+**Step 2. Calculate the probability of B:**  
+If outcome 2 never occurs, each trial results in either 0 or 1. The probability of either 0 or 1 is:
+
+$$
+P(0 \text{ or } 1) = 0.3 + 0.5 = 0.8
+$$
+
+Thus, the probability that outcome 2 never appears in all n trials is:
+
+$$
+P(B) = (0.8)^n
+$$
+**Step 3. Calculate the probability of A∩BA \cap BA∩B:**  
+This is the event that neither outcome 1 nor outcome 2 occurs, meaning every trial results in 0. The probability for each trial is:
+
+$$
+P(0) = 0.3
+$$
+
+So, for n trials:
+
+$$
+P(A \cap B) = (0.3)^n
+$$
+
+**Step 4. Use the complement (via inclusion-exclusion):**  
+We want the probability that both outcome 1 and outcome 2 occur at least once, which is the complement of the event that either outcome 1 or outcome 2 does not occur. Thus, by the principle of inclusion-exclusion:
+
+$$
+P(\text{both 1 and 2 occur}) = 1 - \left[P(A) + P(B) - P(A \cap B)\right]
+$$
+
+Substitute the probabilities:
+
+$$
+P(\text{both 1 and 2 occur}) = 1 - \left[(0.5)^n + (0.8)^n - (0.3)^n\right]
+$$
+
+**Final Answer:**
+
+$$
+1 - (0.5)^n - (0.8)^n + (0.3)^n
+$$
 # 45
-# 47
+## (a)
+
+One way to look at a series is to focus on the deciding  part when both teams are equally positioned. Suppose that after several games the remaining wins needed for each team is 3. Then:
+
+- One team’s chance of winning the next 3 games (and thus the series) is $p^3$.
+- The other team’s chance is $(1-p)^3$.
+
+Since one of these outcomes must occur, the probability that the team with win–probability p wins the series is the ratio of its chance to win all its remaining games over the total chance for either team:
+
+$$
+p_A = \frac{p^3}{p^3 + (1-p)^3}
+$$
+This fraction gives the desired probability under the assumption that the final “race” is a matter of winning 3 games.
+
+## (b)
+Here the idea is to break the overall probability into two cases based on which team is ahead:
+
+1. **If Team A is ahead:**  
+    The chance they win the series is increased. In a simplified model, if they need to win fewer games, one way to express this is by calculating the probability that they do _not_ lose all the remaining opportunities. For example, if they need to win at least one out of 4 remaining games, the probability they do not lose all four is
+    $$
+1 - (1-p)^4
+$$
+2. **If Team A is behind:**  
+    Then they must overcome the deficit. In a symmetric fashion (with roles reversed), the probability they overcome it can be written as
+    $$
+1-p^4
+$$
+
+If we denote by $p_{A}$​ the probability that team A is ahead, then by the law of total probability the overall chance that team A wins the series is
+
+$$
+p_A \Bigl(1 - (1-p)^4\Bigr) + (1-p_A)\Bigl(1 - p^4\Bigr)
+$$
+
+This expression averages the chances over the two scenarios, weighted by the probability of being ahead or behind.
+
+## (c)
+
+Assume the following situation:
+
+- Two teams are playing a series (for example, best-of-7) and the first game has been won by one team.
+- To decide the series, imagine that even after a team reaches 4 wins the teams keep playing a total of 7 games.
+- Because the team that wins the first game already has one win, it needs at least 3 wins in the remaining 6 games to secure a total of 4 wins.
+    
+
+Under the assumption that each game is independent and each team has a 50–50 chance (i.e. probability $\frac{1}{2}$ for each game), the probability that the team wins at least 3 of the next 6 games is calculated by summing the probabilities for winning exactly 3, 4, 5, or all 6 games:
+
+$$
+P(W) = \sum_{i=3}^{6} \binom{6}{i} \left(\frac{1}{2}\right)^6
+$$
+
+Let’s break down the sum:
+
+
+- For $i = 3:\binom{6}{3} = 20$
+- For $i = 4: \binom{6}{4} = 15$
+- For $i = 5 : \binom{6}{5} = 6$
+- For $i = 6 : \binom{6}{6} = 1$
+
+Thus,
+
+$$
+P(W) = \frac{20 + 15 + 6 + 1}{64} = \frac{42}{64} = \frac{21}{32}
+$$
+
+This means that if a team wins the first game, it wins the series with probability $\frac{21}{32}$
 
 # 51
+
+Let's denote the three distinct values by $x_1 < x_2 < x_3$​. The cards A, B, and C receive these values uniformly at random. Notice that the event "the smaller of the values on A and B is smaller than the value on C" is equivalent to saying that card C does not hold the smallest value overall.
+
+Since each card is equally likely to receive any of the three values, the probability that card C gets the smallest value $x_1$ is $\frac{1}{3}$​. Therefore, the probability that card C does not have the smallest value is:
+
+$$
+1-\frac{1}{3 } = \frac{2}{3}
+$$
+The answer is $\frac{2}{3}$
