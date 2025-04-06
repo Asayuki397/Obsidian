@@ -1,0 +1,139 @@
+# 10
+
+## (a)
+A function is a valid joint probability density function if:
+
+$$
+\int_0^1 \int_0^2 f(x, y)\, dy\, dx = 1
+$$
+
+So we compute:
+
+$$
+\int_0^2 \frac{6}{7}\left(x^2 + \frac{xy}{2}\right)\, dy\, dx = \frac{6}{7} \int_0^1 \int_0^2 \left(x^2 + \frac{xy}{2}\right)\, dy\, dx
+$$
+
+**Inner integral (with respect to y):**
+
+$$
+\int_0^2 \left(x^2 + \frac{xy}{2}\right)\, dy = \int_0^2 x^2\, dy + \int_0^2 \frac{xy}{2}\, dy = x^2(2) + \frac{x}{2} \cdot \frac{2^2}{2} = 2x^2 + \frac{x}{2} \cdot 2 = 2x^2 + x
+$$
+
+**Outer integral (with respect to x):**
+
+$$
+\frac{6}{7} \int_0^1 \left(2x^2 + x\right)\, dx = \frac{6}{7} \left[\frac{2x^3}{3} + \frac{x^2}{2}\right]_0^1 = \frac{6}{7} \left(\frac{2}{3} + \frac{1}{2}\right) = \frac{6}{7} \cdot \frac{7}{6} = 1
+$$
+
+it **is** a valid joint density function.
+
+## (b)
+
+
+The marginal density of X, denoted by $f_X(x)$, is obtained by integrating out y:
+
+$$f_X(x)=\int_0^2 f(x,y)\,dy = \int_0^2 \frac{6}{7}\left(x^2+\frac{xy}{2}\right)dy$$
+
+From our previous calculation in part (a), we already computed:
+
+$$
+\int_0^2 \left(x^2+\frac{xy}{2}\right)dy = 2x^2+x
+$$
+
+Thus,
+
+$$
+f_X(x)=\frac{6}{7}\left(2x^2+x\right),\quad 0<x<1
+$$
+
+## (c)
+
+We need to find the probability that X>Y. Since the support is 0<x<1 and 0<y<2, the condition X>Y implies that y must be less than x.
+
+Thus, the probability is given by:
+
+$$
+P(X>Y)=\int_{0}^1\int_{0}^{x} f(x,y)\,dy\,dx
+$$
+
+First, compute the inner integral with respect to y:
+
+$$
+\int_0^x \left(x^2+\frac{xy}{2}\right)dy = x^2\int_0^x dy+\frac{x}{2}\int_0^x y\,dy
+$$
+
+- The first term:
+$$
+x^2\int_0^x dy = x^2\cdot x = x^3
+$$
+- The second term:
+$$
+\frac{x}{2}\int_0^x y\,dy = \frac{x}{2}\cdot\frac{x^2}{2} = \frac{x^3}{4}
+$$
+
+Thus,
+
+$$
+\int_0^x \left(x^2+\frac{xy}{2}\right)dy = x^3+\frac{x^3}{4} = \frac{5x^3}{4}
+$$
+
+Now, substitute back into the double integral:
+
+$$
+P(X>Y)=\int_{0}^{1}\frac{6}{7}\cdot\frac{5x^3}{4}\,dx = \frac{30}{28}\int_{0}^{1} x^3\,dx
+$$
+And compute the remaining integral:
+
+$$
+\int_0^1 x^3\,dx = \frac{1}{4}
+$$
+Thus,
+
+$$
+P(X>Y)=\frac{15}{14}\cdot\frac{1}{4}=\frac{15}{56}
+$$
+# 13
+## (a)
+
+To find the marginal density of X, integrate f(x,y) with respect to y. For a given x, note that y must satisfy x<y<1 (and x must be between 0 and 1).
+
+$$
+f_X(x)=\int_{y=x}^{1} f(x,y)\,dy=\int_{y=x}^{1} 2\,dy=2\int_{y=x}^{1} dy=2(1-x)
+$$
+
+for 0<x<1. Otherwise, $f_X(x)=0$
+## (b)
+
+To find the marginal density of Y, integrate f(x,y) with respect to x. For a given y, the variable x must satisfy 0<x<y (with y between 0 and 1).
+
+$$
+f_Y(y)=\int_{x=0}^{y} f(x,y)\,dx=\int_{x=0}^{y} 2\,dx=2\int_{x=0}^{y} dx=2y
+$$
+
+for 0<y<1. Otherwise, $f_Y(y)=0$.
+## (c)
+
+Two random variables X and Y are independent if and only if
+
+$$
+f(x,y)=f_X(x)f_Y(y)
+$$
+
+for all x and y.
+
+Thus, their product is
+
+$$
+f_X(x)f_Y(y)=\bigl[2(1-x)\bigr]\bigl[2y\bigr]=4y(1-x)
+$$
+
+Compare this to the joint density $f(x,y)=2$ for $0<x<y<1$. Clearly,
+
+$$
+2 \neq 4y(1-x)
+$$
+
+for all (x,y) in the support. For example, at $x = 0.25$ and $y=0.5$
+Since the joint density does not factor as a product of the marginal densities, **X and Y are not independent**.
+
+# 16
