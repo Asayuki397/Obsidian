@@ -137,3 +137,31 @@ for all (x,y) in the support. For example, at $x = 0.25$ and $y=0.5$
 Since the joint density does not factor as a product of the marginal densities, **X and Y are not independent**.
 
 # 16
+Given that X and Y are independent with density functions $f_X(x)$ and $f_Y(y)$ respectively, we know their joint density is
+
+$$f_{X,Y}(x,y)=f_X(x)f_Y(y)$$
+
+We will derive each result using the definition of probability and Fubini's theorem.
+## (a)
+
+1. **Start with the definition:**$$P\{X+Y\le a\} = \iint_{x+y\le a} f_X(x)f_Y(y) \, dx\,dy$$
+2. **Change the order of integration:**
+    Fix a value of y. For each y, the condition$x+y\le a$ becomes $x\le a-y$. Thus, the integral can be rewritten as:
+$$P\{X+Y\le a\} = \int_{-\infty}^{\infty} \left[\int_{-\infty}^{a-y} f_X(x) \, dx \right] f_Y(y) \, dy$$
+3. **Recognize the inner integral as the CDF of X:**
+$$\int_{-\infty}^{a-y} f_X(x) \, dx = F_X(a-y)$$
+4. **Substitute back:**$$P\{X+Y\le a\} = \int_{-\infty}^{\infty} F_X(a-y) f_Y(y) \, dy$$
+
+### (b)
+1. **Start with the definition:**
+$$P\{X\le Y\} = \iint_{x\le y} f_X(x)f_Y(y) \, dx\,dy$$
+2. **Change the order of integration:**
+    For a fixed y, the condition $x\le y$ means x ranges from $-\infty$ to y. Thus, we have:
+$$P\{X\le Y\} = \int_{-\infty}^{\infty} \left[\int_{-\infty}^{y} f_X(x) \, dx \right] f_Y(y) \, dy$$
+3. **Recognize the inner integral as the CDF of X:**
+  $$\int_{-\infty}^{y} f_X(x) \, dx = F_X(y)$$
+4. **Substitute back:**
+$$P\{X\le Y\} = \int_{-\infty}^{\infty} F_X(y) f_Y(y) \, dy$$
+
+# 20
+## (a)
