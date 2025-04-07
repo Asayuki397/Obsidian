@@ -247,3 +247,35 @@ $$B(2,n)=\frac{1\cdot\Gamma(n)}{(n+1)n\,\Gamma(n)}=\frac{1}{n(n+1)}$$
 $$E[m]=n\cdot\frac{1}{n(n+1)}=\frac{1}{n+1}$$
 
 # 33
+### (a) Using Indicators for Each Draw
+
+1. **Define the Indicators:**
+    
+    For $i = 1, 2, \dots, 10$ let
+    $$X_i = \begin{cases} 1, & \text{if the \(i\)th ball drawn is white}, \\ 0, & \text{otherwise}. \end{cases}$$
+    Then, $$X = \sum_{i=1}^{10} X_i$$
+2. **Calculate the Expectation:**
+    
+    By symmetry (each draw is equally likely to be any ball from the urn), the probability that a given draw is white is
+    $$P(X_i = 1) = \frac{17}{40}$$
+    Therefore,
+    
+    $$E[X_i] = \frac{17}{40}$$
+    Using the linearity of expectation,
+    $$E[X] = \sum_{i=1}^{10} E[X_i] = 10 \cdot \frac{17}{40} = \frac{170}{40} = \frac{17}{4} = 4.25$$
+
+### (b) Using Indicators for Each White Ball
+
+1. **Define the Indicators:**
+    
+    For each white ball $j = 1, 2, \dots, 17$ let
+$$Y_j = \begin{cases} 1, & \text{if white ball \(j\) is selected in the 10 draws}, \\ 0, & \text{otherwise}. \end{cases}​$$
+    Then,
+$$X = \sum_{j=1}^{17} Y_j$$
+2. **Calculate the Expectation:**
+    Since 10 balls are chosen out of 40, the probability that any specific white ball is selected is
+$$P(Y_j = 1) = \frac{10}{40} = \frac{1}{4}$$
+    Thus,
+$$E[Y_j] = \frac{1}{4}$$
+    Then, by linearity of expectation,
+    $$E[X] = \sum_{j=1}^{17} E[Y_j] = 17 \cdot \frac{1}{4} = \frac{17}{4} = 4.25$$
