@@ -279,3 +279,5 @@ $$P(Y_j = 1) = \frac{10}{40} = \frac{1}{4}$$
 $$E[Y_j] = \frac{1}{4}$$
     Then, by linearity of expectation,
     $$E[X] = \sum_{j=1}^{17} E[Y_j] = 17 \cdot \frac{1}{4} = \frac{17}{4} = 4.25$$
+
+# 35
