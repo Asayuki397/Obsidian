@@ -203,4 +203,65 @@ $$f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}$$
 $$f_{X,Y}(x,y)=f_X(x)f_Y(y)$$
     This is the definition of independence. Thus, X and Y are independent.
 
+# 29
+
+## (a)
+
+Let $M = \max(X_1, \dots, X_n)$
+
+1. **Find the CDF of M:**
+    Since the $X_i$​ are independent,$$F_M(x)=P(M \le x)=P(X_1 \le x, \dots, X_n \le x)=\prod_{i=1}^n P(X_i \le x)=x^n,\quad 0\le x\le 1$$
+2. **Differentiate to get the density function of M:**
+    fM(x)=ddxFM(x)=nxn−1,0≤x≤1.f_M(x)=\frac{d}{dx}F_M(x)=nx^{n-1},\quad 0\le x\le 1.fM​(x)=dxd​FM​(x)=nxn−1,0≤x≤1.
+3. **Compute the expected value:**
+    
+    E[M]=∫01x fM(x) dx=∫01x⋅nxn−1 dx=n∫01xn dx.E[M]=\int_0^1 x\,f_M(x)\,dx=\int_0^1 x\cdot nx^{n-1}\,dx=n\int_0^1 x^n\,dx.E[M]=∫01​xfM​(x)dx=∫01​x⋅nxn−1dx=n∫01​xndx.
+    
+    The integral is
+    
+    ∫01xn dx=1n+1.\int_0^1 x^n\,dx=\frac{1}{n+1}.∫01​xndx=n+11​.
+    
+    Therefore,
+    
+    E[M]=n⋅1n+1=nn+1.E[M]=n\cdot\frac{1}{n+1}=\frac{n}{n+1}.E[M]=n⋅n+11​=n+1n​.
+
+---
+
+### (b) E[min⁡(X1,…,Xn)]E\left[\min(X_1, \dots, X_n)\right]E[min(X1​,…,Xn​)]
+
+Let m=min⁡(X1,…,Xn)m = \min(X_1, \dots, X_n)m=min(X1​,…,Xn​).
+
+1. **Find the CDF of mmm:**
+    
+    Fm(x)=P(m≤x)=1−P(m>x)=1−P(X1>x,…,Xn>x).F_m(x)=P(m \le x)=1-P(m > x)=1-P(X_1 > x,\dots,X_n > x).Fm​(x)=P(m≤x)=1−P(m>x)=1−P(X1​>x,…,Xn​>x).
+    
+    Since P(Xi>x)=1−xP(X_i > x)=1-xP(Xi​>x)=1−x for 0≤x≤10\le x\le 10≤x≤1, we have
+    
+    P(m>x)=(1−x)n,P(m > x)=(1-x)^n,P(m>x)=(1−x)n,
+    
+    hence,
+    
+    Fm(x)=1−(1−x)n,0≤x≤1.F_m(x)=1-(1-x)^n,\quad 0\le x\le 1.Fm​(x)=1−(1−x)n,0≤x≤1.
+2. **Differentiate to get the density function of mmm:**
+    
+    fm(x)=ddxFm(x)=n(1−x)n−1,0≤x≤1.f_m(x)=\frac{d}{dx}F_m(x)=n(1-x)^{n-1},\quad 0\le x\le 1.fm​(x)=dxd​Fm​(x)=n(1−x)n−1,0≤x≤1.
+3. **Compute the expected value:**
+    
+    E[m]=∫01x fm(x) dx=n∫01x(1−x)n−1 dx.E[m]=\int_0^1 x\,f_m(x)\,dx=n\int_0^1 x(1-x)^{n-1}\,dx.E[m]=∫01​xfm​(x)dx=n∫01​x(1−x)n−1dx.
+    
+    Recognize that the integral is a Beta integral. In general,
+    
+    ∫01xa−1(1−x)b−1 dx=B(a,b)=Γ(a)Γ(b)Γ(a+b).\int_0^1 x^{a-1}(1-x)^{b-1}\,dx=B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}.∫01​xa−1(1−x)b−1dx=B(a,b)=Γ(a+b)Γ(a)Γ(b)​.
+    
+    Here, set a=2a=2a=2 and b=nb=nb=n:
+    
+    ∫01x(1−x)n−1 dx=B(2,n)=Γ(2)Γ(n)Γ(n+2).\int_0^1 x(1-x)^{n-1}\,dx = B(2,n)=\frac{\Gamma(2)\Gamma(n)}{\Gamma(n+2)}.∫01​x(1−x)n−1dx=B(2,n)=Γ(n+2)Γ(2)Γ(n)​.
+    
+    Since Γ(2)=1! =1\Gamma(2)=1!\,=1Γ(2)=1!=1 and Γ(n+2)=(n+1)n Γ(n)\Gamma(n+2)=(n+1)n\,\Gamma(n)Γ(n+2)=(n+1)nΓ(n), we have
+    
+    B(2,n)=1⋅Γ(n)(n+1)n Γ(n)=1n(n+1).B(2,n)=\frac{1\cdot\Gamma(n)}{(n+1)n\,\Gamma(n)}=\frac{1}{n(n+1)}.B(2,n)=(n+1)nΓ(n)1⋅Γ(n)​=n(n+1)1​.
+    
+    Thus,
+    
+    E[m]=n⋅1n(n+1)=1n+1.E[m]=n\cdot\frac{1}{n(n+1)}=\frac{1}{n+1}.E[m]=n⋅n(n+1)1​=n+11​.
 
