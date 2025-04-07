@@ -237,15 +237,13 @@ $$E[m]=\int_0^1 x\,f_m(x)\,dx=n\int_0^1 x(1-x)^{n-1}\,dx.
     $$
     Recognize that the integral is a Beta integral. In general,
 $$\int_0^1 x^{a-1}(1-x)^{b-1}\,dx=B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$$
-    Here, set a=2a=2a=2 and b=nb=nb=n:
-    
-    ∫01x(1−x)n−1 dx=B(2,n)=Γ(2)Γ(n)Γ(n+2).\int_0^1 x(1-x)^{n-1}\,dx = B(2,n)=\frac{\Gamma(2)\Gamma(n)}{\Gamma(n+2)}.∫01​x(1−x)n−1dx=B(2,n)=Γ(n+2)Γ(2)Γ(n)​.
-    
-    Since Γ(2)=1! =1\Gamma(2)=1!\,=1Γ(2)=1!=1 and Γ(n+2)=(n+1)n Γ(n)\Gamma(n+2)=(n+1)n\,\Gamma(n)Γ(n+2)=(n+1)nΓ(n), we have
-    
-    B(2,n)=1⋅Γ(n)(n+1)n Γ(n)=1n(n+1).B(2,n)=\frac{1\cdot\Gamma(n)}{(n+1)n\,\Gamma(n)}=\frac{1}{n(n+1)}.B(2,n)=(n+1)nΓ(n)1⋅Γ(n)​=n(n+1)1​.
-    
-    Thus,
-    
-    E[m]=n⋅1n(n+1)=1n+1.E[m]=n\cdot\frac{1}{n(n+1)}=\frac{1}{n+1}.E[m]=n⋅n(n+1)1​=n+11​.
+    Here, set $a=2$ and $b=n$:
+$$\int_0^1 x(1-x)^{n-1}\,dx = B(2,n)=\frac{\Gamma(2)\Gamma(n)}{\Gamma(n+2)}$$
 
+    Since $\Gamma(2)=1! = 1$ and $\Gamma(n+2)=(n+1)n\,\Gamma(n)$, we have
+$$B(2,n)=\frac{1\cdot\Gamma(n)}{(n+1)n\,\Gamma(n)}=\frac{1}{n(n+1)}$$
+    Thus,
+
+$$E[m]=n\cdot\frac{1}{n(n+1)}=\frac{1}{n+1}$$
+
+# 33
