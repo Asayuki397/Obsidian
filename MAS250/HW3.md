@@ -172,53 +172,35 @@ $$p_{X,Y}(x,y)=p_X(x)p_Y(y)$$
 2. **Definition of Conditional Probability:**  
     For $p_Y(y)>0$, the conditional probability of X given $Y=y$ is defined by
 $$p_{X|Y}(x|y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}$$
-3. **Proof that Independence Implies pX∣Y(x∣y)=pX(x)p_{X|Y}(x|y)=p_X(x)pX∣Y​(x∣y)=pX​(x):**  
-    If XXX and YYY are independent,
-    
-    pX∣Y(x∣y)=pX(x)pY(y)pY(y)=pX(x).p_{X|Y}(x|y)=\frac{p_X(x)p_Y(y)}{p_Y(y)}=p_X(x).pX∣Y​(x∣y)=pY​(y)pX​(x)pY​(y)​=pX​(x).
-4. **Proof of the Converse:**  
-    Conversely, assume that for all xxx and yyy (with pY(y)>0p_Y(y)>0pY​(y)>0) we have
-    
-    pX∣Y(x∣y)=pX(x).p_{X|Y}(x|y)=p_X(x).pX∣Y​(x∣y)=pX​(x).
-    
-    Then, by the definition of conditional probability,
-    
-    pX,Y(x,y)pY(y)=pX(x),\frac{p_{X,Y}(x,y)}{p_Y(y)}=p_X(x),pY​(y)pX,Y​(x,y)​=pX​(x),
-    
-    which implies
-    
-    pX,Y(x,y)=pX(x)pY(y).p_{X,Y}(x,y)=p_X(x)p_Y(y).pX,Y​(x,y)=pX​(x)pY​(y).
-    
-    This is exactly the definition of independence. Hence, XXX and YYY are independent.
-    
+3. **Proof that Independence Implies $p_{X|Y}(x|y)=p_X(x)$:**  
+    If X and Y are independent,
+$$p_{X|Y}(x|y)=\frac{p_X(x)p_Y(y)}{p_Y(y)}=p_X(x)$$
 
----
+4. **Proof of the Converse:**  
+    Conversely, assume that for all x and y (with $p_Y(y)>0$) we have
+$$p_{X|Y}(x|y)=p_X(x)$$
+    Then, by the definition of conditional probability,
+$$\frac{p_{X,Y}(x,y)}{p_Y(y)}=p_X(x)$$
+    which implies
+$$p_{X,Y}(x,y)=p_X(x)p_Y(y)$$
+    This is exactly the definition of independence. Hence, X and Y are independent.
 
 ### Continuous Case
 
 1. **Definition of Independence:**  
-    XXX and YYY are independent if, for all xxx and yyy,
-    
-    fX,Y(x,y)=fX(x)fY(y).f_{X,Y}(x,y)=f_X(x)f_Y(y).fX,Y​(x,y)=fX​(x)fY​(y).
+    X and Y are independent if, for all x and y,
+$$f_{X,Y}(x,y)=f_X(x)f_Y(y)$$
 2. **Definition of Conditional Density:**  
-    For fY(y)>0f_Y(y)>0fY​(y)>0, the conditional density of XXX given Y=yY=yY=y is defined by
-    
-    fX∣Y(x∣y)=fX,Y(x,y)fY(y).f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}.fX∣Y​(x∣y)=fY​(y)fX,Y​(x,y)​.
-3. **Proof that Independence Implies fX∣Y(x∣y)=fX(x)f_{X|Y}(x|y)=f_X(x)fX∣Y​(x∣y)=fX​(x):**  
-    If XXX and YYY are independent,
-    
-    fX∣Y(x∣y)=fX(x)fY(y)fY(y)=fX(x).f_{X|Y}(x|y)=\frac{f_X(x)f_Y(y)}{f_Y(y)}=f_X(x).fX∣Y​(x∣y)=fY​(y)fX​(x)fY​(y)​=fX​(x).
+    For $f_Y(y)>0$, the conditional density of X given $Y=y$ is defined by
+$$f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}$$
+3. **Proof that Independence Implies $f_{X|Y}(x|y)=f_X(x)$:**  
+    If X and Y are independent,
+    $$f_{X|Y}(x|y)=\frac{f_X(x)f_Y(y)}{f_Y(y)}=f_X(x)$$
 4. **Proof of the Converse:**  
-    Conversely, assume that for all xxx and yyy (with fY(y)>0f_Y(y)>0fY​(y)>0) we have
-    
-    fX∣Y(x∣y)=fX(x).f_{X|Y}(x|y)=f_X(x).fX∣Y​(x∣y)=fX​(x).
-    
-    Then, by the definition of conditional density,
-    
-    fX,Y(x,y)fY(y)=fX(x),\frac{f_{X,Y}(x,y)}{f_Y(y)}=f_X(x),fY​(y)fX,Y​(x,y)​=fX​(x),
-    
+    Conversely, assume that for all x and y (with $f_Y(y)>0$) we have$$f_{X|Y}(x|y)=f_X(x)$$Then, by the definition of conditional density,
+    $$\frac{f_{X,Y}(x,y)}{f_Y(y)}=f_X(x)$$
     which implies
-    
-    fX,Y(x,y)=fX(x)fY(y).f_{X,Y}(x,y)=f_X(x)f_Y(y).fX,Y​(x,y)=fX​(x)fY​(y).
-    
-    This is the definition of independence. Thus, XXX and YYY are independent.
+$$f_{X,Y}(x,y)=f_X(x)f_Y(y)$$
+    This is the definition of independence. Thus, X and Y are independent.
+
+
