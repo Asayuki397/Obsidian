@@ -281,3 +281,17 @@ $$E[Y_j] = \frac{1}{4}$$
     $$E[X] = \sum_{j=1}^{17} E[Y_j] = 17 \cdot \frac{1}{4} = \frac{17}{4} = 4.25$$
 
 # 35
+
+![[Pasted image 20250408223929.png]]
+
+# 40
+![[Pasted image 20250409214409.png]]
+# 50
+![[Pasted image 20250409214432.png]]
+# 52 & 54
+
+![[Pasted image 20250409214450.png]]
+
+# 57
+
+![[Pasted image 20250409214517.png]]
