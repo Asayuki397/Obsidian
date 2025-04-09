@@ -23,6 +23,10 @@ Ee^{tx} = \int_{0}^{\infty}e^{tx}\lambda e^{-\lambda x}dx = \begin{cases}
 \frac{\lambda}{\lambda-t} && (t<\lambda)
 \end{cases}
 $$
+For sequences:
+$$
+Ee^{t(X_{1}+\dots+X_{n})} = (\frac{\lambda}{\lambda-t})^n
+$$
 # Fact
 ## **Memoryless** property
 #important 
