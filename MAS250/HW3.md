@@ -293,5 +293,4 @@ $$E[Y_j] = \frac{1}{4}$$
 ![[Pasted image 20250409214450.png]]
 
 # 57
-
 ![[Pasted image 20250409214517.png]]
